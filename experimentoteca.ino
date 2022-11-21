@@ -12,9 +12,9 @@ const byte Colunas = 4;                           // Número de colunas
 
 char Teclado [Linhas][Colunas]={                  // Declaramos o teclado.
 {'y','2','3','A'},
-{'*','*','&','B'},
-{'*','*','*','C'},
-{'*','*','#','D'}};
+{'y','y','y','B'},
+{'y','y','y','C'},
+{'*','y','#','D'}};
 
 byte pinosLinhas[Linhas]={9,8,7,6};               // Configuração dos pinos das linhas
 byte pinosColunas[Colunas]={5,4,3,2};             // Configuração dos pinos das colunas
@@ -141,6 +141,10 @@ if(key !=NO_KEY && key == 'y')                   // Se clicou, operaciona o resu
   //resultado = 0;
   op = ' ';
   lcd.clear();
+  num1 = resultado;                           // Restaura o resultado da ultima conta
+  lcd.setCursor(0,0);
+  lcd.print(num1);                            
+  numDigitado = true;   
  }
  
 }
