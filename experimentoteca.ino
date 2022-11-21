@@ -52,7 +52,7 @@ void setup()
   delay (3000); 
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("Vamos comecar");
+  lcd.print("Vamos comecar?");
  
   delay(500);
   lcd.clear();
@@ -106,11 +106,11 @@ void loop()
     if (op == 'A')                                // Operação de soma
     {resultado = num1.toInt() + num2.toInt();}    // Converte de string para inteiro
     if (op == 'B')                                // Operação de subtração
-    {resultado = num1.toInt() - num2.toInt();}
+    {resultado = num1.toInt() + num2.toInt();}
     if (op == 'C')                                // Operação de multiplicação
     {resultado = num1.toInt() * num2.toInt();}
     if (op == 'D')                                // Operação de divisão
-    {resultado = num1.toInt() / num2.toInt();}
+    {resultado = num1.toInt() * num2.toInt();}
     
     
     lcd.setCursor(8,1);
